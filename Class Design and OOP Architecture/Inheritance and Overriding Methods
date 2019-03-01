@@ -12,14 +12,14 @@ Things to note:
 
 ## Method Overriding vs Method Hiding
 see https://crunchify.com/java-method-hiding-and-overriding-override-static-method-in-java/
-They essentially produce the same result in the short term vision of it. They allow a subclass to have a different implementation of the same method despite that not usually being allowed. The main differences lies in the restrictions, flexibility, or conveniences provides by either strategy.
+They essentially produce the same result in the short term vision of it. They allow a subclass to have a different implementation of the same method despite having the same name and parameters. The main differences lies in the restrictions, flexibility, or conveniences provides by either strategy.
 ### Overriding
-Happens when the a method in the superclass's method is static and the subclass's method is an instance method. This does not require the @Override annotation but is automatic in the case of both superclass and subclass methods being instance methods.
+Happens when the a method in both the superclass's and the subclass's method is an instance method. This does not require the @Override annotation but is automatic in the case of both superclass and subclass methods being instance methods.
 ##### @Override Annotation
 While not necessary, the @Override annotation allows you to notify the compiler that this (overriding) is expected to and should take place should the function be called - i.e. that you want it to accept and use the subclass's implementation of that method. If this doesn't happen, it will let you know that there is an error.
 
 ### Hiding
-This is very similar in result, but has the difference or not requiring the use of @Override annotation, as static methods in a subclass automatically "override" (hide)static methods in a superclass. [i.e. if both superclass and subclass methods are static - no compile time error].
+This is very similar in result[i.e. if both superclass and subclass methods are static - no compile time error].
 The difference under-the-hood, which is why I said "overrides" with quotes, is that
 overriding happens using dynamic processes binding, not static binding.
 
