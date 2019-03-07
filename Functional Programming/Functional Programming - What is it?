@@ -1,0 +1,9 @@
+# Functional Programming
+
+##What is it?
+
+Functional Programming is a programming paradigm (ideologoy) where one tries to avoid the use of state change in functions (treating all data as immutable [unchanging]).
+
+The reason for this is that most of the difficulties we face in programming is actually to do with tracking state changes.
+
+https://www.linkedin.com/learning/learning-functional-programming-with-javascript/what-is-functional-programming
