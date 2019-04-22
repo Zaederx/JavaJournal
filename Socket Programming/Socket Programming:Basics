@@ -1,0 +1,19 @@
+Recently I've been working a bit on socket programming for an assignment.
+
+Here are some of the main pitfalls that I have made that could have saved me a lot of time if I knew of them / was warned a bit before hand.
+
+Turns out that when you create a socket that the name used for socket cannot be determined by the user "as such". What I mean to say, is that it relies upon the DNS server name. Which means that for a local program, you will most likely be using "localhost", which is the DNS official name for any program ran on a local system.
+So don't go trying to name your local server "Game" {GameServer} or something random like like I did. :)
+
+Also some key things I would also like to remember.
+
+On the ServerSide
+portNum = 1234; //some random num - i.e. any unused port num, as some might already be used by system.
+ServerSocket server = new ServerSocket(portNum);
+
+
+try (
+Socket client = server.accept();
+
+
+//Also by doing this I learnt some cool ways to use the try catch statement that I previously didn't know. Was completely unaware that the try statement has a constructor variant! Is can take an entire initialisation as an argument.
