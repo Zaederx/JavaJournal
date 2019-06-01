@@ -1,0 +1,18 @@
+
+Friday 03/05/19 - The difference between start and run method
+Something pretty useful to note about using threads is that if you call run instead of the start method, the program with run sequentially. If you use start() it will run concurrently.
+
+Very interesting and important fact to note.
+
+
+ThreadPoolExecutor
+- Can run a set of threads at the same time
+- has some helper methods to check how many threads are running at the same time.
+
+ThreadPoolExecutor ex x = (ThreadPoolExecutor) Executor.newFixedThreadPoolExecutor(5);
+
+useful method - getActiveCount();
+
+Adding  thread to a pool.
+Thread t = new Thread();
+ex.execute(t);

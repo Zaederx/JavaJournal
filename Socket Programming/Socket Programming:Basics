@@ -17,3 +17,15 @@ Socket client = server.accept();
 
 
 //Also by doing this I learnt some cool ways to use the try catch statement that I previously didn't know. Was completely unaware that the try statement has a constructor variant! Is can take an entire initialisation as an argument.
+
+
+26/05/19
+Key words:
+- Flushing - when information is sent from one end point (one socket) to another end point. [i.e. from client socket to server socket.]
+
+Something additional that I've learned. In order to use the readLine capabilities of a buffered reader in order to flush information down a socket from client to server and vice vera, you have to make sure that you print each statement on a new line, else the information will not be able to be called on the other end using println. As readLine only works when you are using lines! :D
+
+Makes sense right! So don't put use print or else the information will not go through from one end to another and you will be wondering why it doesn't, when really it is simply waiting for the end of a line in order to read it.\
+
+Also printf and other format functions will append a line break "\n" , so they (along with println) will work with something called "auto flushing". Auto flushing is a feature that you can enable on buffered readers, that allows them
+to be flushed each time there is a new line or you use a function that does this.
